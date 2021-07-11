@@ -1,0 +1,33 @@
+body {
+  background: rgba(250, 247, 244, 0.685);
+  color: #111;
+}
+.main {
+  width: 500px;
+  margin: 0 auto;
+}
+body form {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* align-items: center; */
+}
+.form-group label {
+  margin-bottom: 10px;
+}
+.form-group input {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+form button {
+  width: 80px;
+  align-self: center;
+  padding: 10px;
+  color: #111;
+  border: 1px solid #222;
+  background: #fff;
+}

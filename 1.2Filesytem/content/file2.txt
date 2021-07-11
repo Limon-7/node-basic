@@ -1,0 +1,13 @@
+Here is the result:
+ this is the first file.
+ This is the second file:
+Here is the result:
+ this is the first file.
+ utf8Here is the result:
+ this is the first file.
+ Here is the result:
+ this is the first file.
+ This is the second file:
+Here is the result:
+ this is the first file.
+ utf8
