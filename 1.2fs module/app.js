@@ -1,4 +1,5 @@
 const fs = require("fs");
+const util = require("util");
 
 //#region readFileSync()
 function syncFileSystem() {
@@ -56,5 +57,46 @@ function fileSysteminfo() {
 }
 //#endregion readFile()
 
+//#region Async/promise
+function readFileAsync(path) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, "utf8", (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+}
+
+function usingPromise() {
+  readFileAsync("./content/fileSystem2.txt")
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+}
+//#endregion Async/promise
+
+// using await/async
+const start = async () => {
+  try {
+    let first = await readFileAsync("./content/fileSystem2.txt");
+    console.log(first);
+  } catch (error) {
+    console.log(err);
+  }
+};
+
+//#region  using Promisfy
+const promisifyInfo = async () => {
+  const readFileOnePromise = util.promisify(fs.readFile);
+  let f1 = await readFileOnePromise("./content/fileSystem1.txt", "utf8");
+  console.log("promisify:??\n", f1);
+};
+
+//#endregion
 // syncFileSystem();
-fileSysteminfo();
+//  fileSysteminfo();
+// usingPromise();
+// start();
+promisifyInfo();

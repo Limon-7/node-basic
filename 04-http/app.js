@@ -4,6 +4,8 @@ const { type } = require("os");
 
 http
   .createServer((req, res) => {
+    // console.log(http.STATUS_CODES);
+    // console.log(req.headers);
     /*  // html/text
     const readStream = fs.createReadStream("./static/index.html");
     res.writeHead(200, { "Content-type": "text/html" }); */

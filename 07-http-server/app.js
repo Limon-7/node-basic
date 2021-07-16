@@ -3,6 +3,7 @@
 const http = require("http");
 
 const server = http.createServer(function (req, res) {
+  console.log(http.request);
   res.setHeader("Content-type", "application/json");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.writeHead(200); //status code HTTP 200 / OK
